@@ -1,15 +1,15 @@
-import math
-def fun(x):
-    if x==1:
+import math as m
+def fun(n):
+    if n<2:
         return False
-    for i in range(2,int(math.sqrt(x))+1):
-        if x%i==0:
+    for i in range(2,int(m.sqrt(n)+1)):
+        if n%i==0:
             return False
     return True
-n=int(input())
-m=int(input())
-c=0
-for i in range(n,m+1):
-    if fun(i):
-        c+=1
-print(c)
+x=0
+a=int(input())
+b=int(input())
+for s in range(a,b+1):
+    if fun(s):
+        x=x+1
+print(x)
