@@ -1,12 +1,13 @@
-x=int(input())
+n=int(input())
 l=list(map(int,input().split()))
-if x%2!=0:
-    l.insert((x//2)+1,0)
-    x+=1
+ln=len(l)//2
+l1=[]
+for i in range(ln):
+    l1.append(l[i])
+    l1.append(l[-(i+1)])
+if(len(l)%2==0):
+    print(*l1)
 else:
-    l=l
-for i in range(x):
-    if i!=x//2:
-        print(l[i],l[(0-i+x-1)],end=' ')
-    else:
-        break
+    l1.append(l[ln])
+    l1.append(0)
+    print(*l1)
