@@ -1,8 +1,10 @@
 n=input()
-l=list(n.split(" "))
+l=list(n.split())
 ls=0
 ss=0
 for i in range(len(l)):
+    ls=0
+    ss=0
     l2=[]
     s=l[i]
     for j in range(len(s)):
